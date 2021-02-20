@@ -3,14 +3,7 @@ body {
     font-family: 'Quicksand', sans-serif;
     color: black;
     font-size: 18px;
-    background: white;
-}
-
-#status {
-    color: orange;
-    font-weight: bold;
-    font-size: 26px;
-    text-transform: uppercase;
+    background: antiquewhite;
 }
 
 .lesson {
@@ -19,30 +12,6 @@ body {
     background: #f5f5f5;
     color: rgb(34, 32, 32);
     padding: 30px;
-}
-
-.contact-card {
-    width: 500px;
-    border: 3px solid #ccc;
-    border-radius: 10px;
-    padding: 15px;
-    margin-bottom: 10px;
-    background: linen;
-    font-weight: bold;
-}
-
-.fallback-one {
-    padding: 30px;
-    margin: 20px auto;
-    max-width: 1000px;
-    background: linen;
-}
-
-.fallback-two {
-    padding: 30px;
-    margin: 20px auto;
-    max-width: 1000px;
-    background: rgb(180, 177, 173);
 }
 
 .contact-form {
@@ -65,12 +34,6 @@ button {
     font-weight: bold;
     letter-spacing: 2px;
     font-family: inherit;
-}
-
-.form-sw-message {
-    border: 2px solid grey;
-    padding: 10px;
-    margin: 10px 0px;
 }
 
 input {
@@ -132,143 +95,55 @@ li {
     justify-content: space-between;
 }
 
-.sample-image {
-    width: 100px;
-    height: 100px;
-}
 
-
-/* MOBILE */
+/* WEATHER */
 
 * {
-    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
 }
 
-.navbar {
-    display: flex;
+#display {
+    color: #333;
+    font-family: sans-serif;
+    font-size: 20px;
+}
+
+#search {
+    font-size: 28px;
+    color: red;
+}
+
+.spinner {
+    display: inline-block;
     position: relative;
-    justify-content: center;
-    align-items: center;
-    background-color: #2196f3;
-    color: white;
+    width: 50px;
+    height: 50px;
 }
 
-.brand-title {
-    font-size: 1.5rem;
-    margin: 0.5rem;
+.spinner {
+    padding-top: 8px;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
 }
 
-.navbar-links {
-    height: 100%;
-}
-
-.navbar-links ul {
-    display: flex;
-    text-align: center;
-    margin: 0;
-    padding: 0px;
-}
-
-.navbar-links li {
-    list-style: none;
-}
-
-.navbar-links li a {
+.spinner:after {
+    content: ' ';
     display: block;
-    text-decoration: none;
-    color: white;
+    width: 36px;
+    height: 36px;
+    margin: 1px;
+    border-radius: 50%;
+    border: 5px solid rgb(255, 0, 100);
+    border-color: rgb(255, 0, 100) transparent rgb(255, 0, 100) transparent;
+    animation: spinner 1.2s linear infinite;
 }
 
-.navbar-links li a:hover {
-    display: block;
-    text-decoration: none;
-    color: orange;
-}
-
-.toggle-button {
-    position: absolute;
-    top: 0.75rem;
-    right: 1rem;
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 21px;
-}
-
-.toggle-button .bar {
-    height: 3px;
-    width: 100%;
-    background-color: white;
-    border-radius: 10px;
-}
-
-@media (max-width: 800px) {
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;
+@keyframes spinner {
+    0% {
+        transform: rotate(0deg);
     }
-    .toggle-button {
-        display: flex;
+    100% {
+        transform: rotate(360deg);
     }
-    .navbar-links {
-        display: none;
-        width: 100%;
-    }
-    .navbar-links ul {
-        width: 100%;
-        flex-direction: column;
-    }
-    .navbar-links ul li {
-        text-align: center;
-    }
-    .navbar-links ul li a {
-        padding: 0.5rem 1rem;
-    }
-    .navbar-links.active {
-        display: flex;
-    }
-}
-
-
-/* Background Styles Only */
-
-.side-links {
-    position: absolute;
-    bottom: 15px;
-    right: 15px;
-}
-
-.side-link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    margin-bottom: 10px;
-    color: white;
-    width: 180px;
-    padding: 10px 0;
-    border-radius: 10px;
-}
-
-.side-link-youtube {
-    background-color: red;
-}
-
-.side-link-twitter {
-    background-color: #1da1f2;
-}
-
-.side-link-github {
-    background-color: #6e5494;
-}
-
-.side-link-text {
-    margin-left: 10px;
-    font-size: 18px;
-}
-
-.side-link-icon {
-    color: white;
-    font-size: 30px;
 }
