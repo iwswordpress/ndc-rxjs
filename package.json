@@ -1,0 +1,23 @@
+{
+    "name": "ndc-rxjs",
+    "version": "1.0.0",
+    "description": "Course Files",
+    "private": true,
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "webpack",
+        "start": "webpack-dev-server --open"
+    },
+    "keywords": [],
+    "author": "Craig West",
+    "license": "ISC",
+    "devDependencies": {
+        "webpack": "^4.32.2",
+        "webpack-cli": "^3.3.2",
+        "webpack-dev-server": "^3.11.0"
+    },
+    "dependencies": {
+        "rxjs": "^6.5.2"
+    }
+}
